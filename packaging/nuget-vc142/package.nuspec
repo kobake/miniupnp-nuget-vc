@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>miniupnpc-vc142</id>
+        <title>miniupnpc-vc142</title>
+        <version>2.0.0</version>
+        <authors>Thomas BERNARD</authors>
+        <owners>kobake</owners>
+        <license type="expression">BSD-3-Clause</license>
+        <projectUrl>https://github.com/kobake/miniupnp-nuget-vc</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>MiniUPnPc 2.0 for vc142. Compiler: VS2019 16.5.4.</summary>
+        <description>MiniUPnP client (MiniUPnPc) library 2.0, wrapped for Visual Studio 2019 (vc142)</description>
+        <releaseNotes>First edition.</releaseNotes>
+        <copyright>Copyright (c) 2005-2016, Thomas BERNARD</copyright>
+        <tags>native, miniupnp, miniupnpc, C, C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <!-- targets -->
+        <file src="package.targets"              target="build\native\miniupnpc-vc142.targets" />
+
+
+        <!-- headers -->
+        <file src="..\..\miniupnp\miniupnpc\*.h" target="build\native\x86_include\miniupnpc\" />
+        <file src="..\x86_include\miniupnpc\*.h" target="build\native\x86_include\miniupnpc\" />
+
+        <file src="..\..\miniupnp\miniupnpc\*.h" target="build\native\x64_include\miniupnpc\" />
+        <file src="..\x64_include\miniupnpc\*.h" target="build\native\x64_include\miniupnpc\" />
+
+
+        <!-- static libraries -->
+        <file src="..\x86_debug\*.lib"           target="build\native\bin\x86_debug\" />
+        <file src="..\x86_release\*.lib"         target="build\native\bin\x86_release\" />
+
+        <file src="..\x64_debug\*.lib"           target="build\native\bin\x64_debug\" />
+        <file src="..\x64_release\*.lib"         target="build\native\bin\x64_release\" />
+    </files>
+</package>

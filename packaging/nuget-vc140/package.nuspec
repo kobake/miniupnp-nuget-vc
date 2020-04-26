@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>miniupnpc-vc140</id>
+        <title>miniupnpc-vc140</title>
+        <version>2.0.0.1</version>
+        <authors>Thomas BERNARD</authors>
+        <owners>kobake</owners>
+        <licenseUrl>https://raw.githubusercontent.com/miniupnp/miniupnp/master/miniupnpc/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/kobake/miniupnp-vc140-nuget</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>miniupnpc library packaged for Visual Studio 2015 (msvc14). This library is experimental, so use at your own risk.</summary>
+        <description>The MiniUPnP project offers software which supports the UPnP Internet Gateway Device (IGD) specifications.</description>
+        <releaseNotes>Excluded main function.</releaseNotes>
+        <copyright>Copyright (c) 2005-2016, Thomas BERNARD</copyright>
+        <tags>native, miniupnp, miniupnpc, C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="package.targets"               target="build\native\miniupnpc-vc140.targets" />
+
+        <file src="..\..\*.h"                     target="build\native\include\miniupnpc" />
+
+        <file src="..\..\Release\miniupnpc.lib"   target="build\native\bin\miniupnpc.lib" />
+        <file src="..\..\Release\miniupnpc.dll"   target="build\native\bin\miniupnpc.dll" />
+    </files>
+</package>
